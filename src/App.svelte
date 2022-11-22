@@ -1,19 +1,18 @@
 <script>
+  import Router from 'svelte-spa-router'
+  import Home from './routes/Home.svelte'
+  import Himars from './routes/Himars.svelte'
+  import Javelin from './routes/Javelin.svelte'
+  import Bayraktar from './routes/Bayraktar.svelte'
+  import M777 from './routes/M777.svelte'
 
-  import { routes, Router } from 'svelte-hash-router'
-  import Home from './routes/Home.svelte'
-  import Himars from './routes/Himars.svelte'
-  import Javelin from './routes/Javelin.svelte'
-  import Bayraktar from './routes/Bayraktar.svelte'
-  import M777 from './routes/M777.svelte'
-
-  routes.set({
-    '/': Home,
-    '/himars': Himars,
-    '/javelin': Javelin,
-    '/bayraktar': Bayraktar,
-    '/m777': M777,
-  })
+  const routes = {
+    '/': Home,
+    '/himars': Himars,
+    '/javelin': Javelin,
+    '/bayraktar': Bayraktar,
+    '/m777': M777,
+  }
 </script>
 
 <h1>Main Page</h1>
@@ -24,8 +23,7 @@
   <a href="#/bayraktar">Bayraktar</a>
   <a href="#/m777">M777</a>
 </nav>
-<Router/>
+<Router {routes} />
 
 <style>
-
 </style>

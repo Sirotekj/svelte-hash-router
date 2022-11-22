@@ -1,8 +1,8 @@
 <script>
-const navigateTo = () => {
-  window.location = "#/about"
-}
+  import { link } from 'svelte-spa-router'
 </script>
+
 <h1>HOME</h1>
-<button on:click={navigateTo}>ABOUT</button>
+<a href="#/about" use:link>ABOUT</a>
+
 <!--https://via.placeholder.com/150-->
